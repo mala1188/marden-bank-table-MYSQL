@@ -28,7 +28,7 @@ CREATE TABLE `accounts` (
   `created_at` timestampz DEFAULT "now()",
   `deleted_at` timestampz
 );
-
+// mardin abubakir
 CREATE TABLE `transactions` (
   `transaction_id` bigserial PRIMARY KEY,
   `transaction_type` VARCHAR,
@@ -51,6 +51,7 @@ CREATE TABLE `loans` (
   `deleted_at` timestampz
 );
 
+//mardin abubakir
 ALTER TABLE `accounts` ADD FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`);
 
 ALTER TABLE `transactions` ADD FOREIGN KEY (`from_account_id`) REFERENCES `accounts` (`account_id`);
